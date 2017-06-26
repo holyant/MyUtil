@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>	
+	<package name="test"  namespace="/test" extends="json-default">
+		<global-results>
+			<result name="error">/404.html</result>
+		</global-results>
+		<action name="excel" class="test.web.action.ExcelImportAction">
+			<result name="success" type="dispatcher">/test/excel/excelImportFrame.jsp</result>
+			<result name="error" type="dispatcher">/test/excel/errorFrame.jsp</result>
+			<result name="input">/404.html</result> <!-- 如果需要文件上传，得加上这个result -->
+		</action>
+		
+	</package>
+</struts>

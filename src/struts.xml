@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.action.extension" value="action,,"></constant>
+	<constant name="struts.locale" value="zh_CN"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.multipart.maxSize" value="524288000" /><!-- struts默认最大上传大小是2M,如果要上传大文件，那么需要调整该属性 -->
+	
+	<package name="default"  namespace="/" extends="json-default" abstract="true">
+
+	</package>
+	<include file="struts-a.xml"></include>
+	<include file="struts_test.xml"></include>
+</struts>
